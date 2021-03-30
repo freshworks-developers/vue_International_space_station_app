@@ -5,8 +5,7 @@
   "main": "index.js",
   "frontend_framework": "vue",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development"
+    "code-sanity":""
   },
   "keywords": [],
   "author": "",
