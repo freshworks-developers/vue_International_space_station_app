@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "frontend_framework": "vue",
+  "fdkConfig":{
+    "frontendFramework": "vue1"
+  },
   "scripts": {
     "code-sanity":""
   },
