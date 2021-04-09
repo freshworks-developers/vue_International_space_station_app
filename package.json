@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "fdkConfig":{
-    "frontendFramework": "vue1"
+    "frontendFramework": "vue"
   },
   "scripts": {
     "code-sanity":""
