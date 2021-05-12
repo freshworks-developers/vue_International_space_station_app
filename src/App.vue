@@ -1,8 +1,6 @@
 <template >
   <div>
-    <div v-if="location === 'ticket_sidebar'">
-      <Sidebar :agentName="name" />
-    </div>
+      <Sidebar :client="client" />
   </div>
 </template>
 
@@ -20,46 +18,18 @@ export default {
   },
   data() {
     return {
-      location: "",
-      name: "",
+      client: {}
     };
   },
   methods: {
     get() {
       app.initialized().then((client) => {
-        client.data.get("contact").then(
-          (data) => {
-            this.name = data.contact.name;
-          },
-          (error) => {
-            console.error("error", error);
-          }
-        );
-        this.interface(client);
+        this.client = client;
       });
-    },
-    interface(client) {
-      client.instance.context().then((context) => {
-        this.location = context.location;
-      });
-    },
-    instance() {
-      
     },
   },
 };
-// app.initialized().then((client) => {
-//   console.log("client", client);
-//   client.data.get("contact").then(
-//     (data) => {
-//       console.log("data", data.contact.name);
-//     },
-//     (error) => {
-//       console.error("error", error);
-//     }
 
-//   );
-// });
 </script>
 
 <style scoped>

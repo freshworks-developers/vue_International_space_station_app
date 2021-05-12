@@ -3,3 +3,4 @@ node_modules/
 app/scripts/
 .report.json
 coverage/
+package-lock.json
